@@ -1,9 +1,9 @@
 export const company = {
   name: 'Demic Structures',
   tagline: 'We build it right, from ground to greatness.',
-  logo: "/demic_logo.jpg",
+  logo: "/demic-logo.png",
   email: 'demicstructures@gmail.com',
-  phones: ['09055428446', '08027116110'],
+  phones: ['+234 905 542 8446', '+234 802 711 6110'],
   hours: 'Mon – Sat, 8:00am – 6:00pm',
   serviceAreas: ['Abuja', 'Enugu', 'Lagos', 'Port Harcourt']
 } as const;

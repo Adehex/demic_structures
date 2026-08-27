@@ -53,7 +53,7 @@ export function Contact() {
                     {company.phones.map((phone) =>
                     <a
                       key={phone}
-                      href={`tel:${phone}`}
+                      href={`tel:${phone.replace(/\s/g, '')}`}
                       className="font-display text-lg font-semibold text-white transition-colors duration-150 ease-out hover:text-signal">
                       
                         {phone}
@@ -115,7 +115,7 @@ export function Contact() {
                   <label htmlFor="phone" className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-ink-400">
                     Phone number
                   </label>
-                  <input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="0803 000 0000" className={fieldClass} />
+                  <input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="+234 803 000 0000" className={fieldClass} />
                 </div>
                 <div className="sm:col-span-1">
                   <label htmlFor="type" className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-ink-400">

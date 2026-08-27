@@ -44,7 +44,7 @@ export function Nav() {
 
         <div className="hidden items-center gap-6 lg:flex">
           <a
-            href={`tel:${company.phones[0]}`}
+            href={`tel:${company.phones[0].replace(/\s/g, '')}`}
             className="flex items-center gap-2 text-sm font-medium text-bone-100/80 transition-colors duration-150 ease-out hover:text-white">
             
             <PhoneIcon className="h-4 w-4 text-signal" aria-hidden="true" />

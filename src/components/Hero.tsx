@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon, MapPinIcon } from 'lucide-react';
 import { company } from '../data/company';
@@ -14,7 +13,7 @@ export function Hero() {
         alt="Completed contemporary three-storey residence built by Demic Structures in Lekki, Lagos"
         className="absolute inset-0 h-full w-full object-cover object-center" />
       
-      <div className="absolute inset-0 bg-ink-950/72" aria-hidden="true" />
+      <div className="absolute inset-0 bg-ink-950/30" aria-hidden="true" />
       <div className="absolute inset-x-0 bottom-0 h-40 bg-ink-950/60" aria-hidden="true" />
 
       <div className="relative mx-auto w-full max-w-shell px-6 pb-14 pt-32 lg:px-10 lg:pb-20">
