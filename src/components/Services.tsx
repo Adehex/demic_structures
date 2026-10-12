@@ -1,10 +1,9 @@
-import React from 'react';
 import { services } from '../data/services';
 
 export function Services() {
   return (
-    <section id="services" className="bg-white py-20 lg:py-28">
-      <div className="mx-auto max-w-shell px-6 lg:px-10">
+    <section id="services" className="bg-white py-16 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-shell px-5 sm:px-6 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28">
@@ -27,7 +26,7 @@ export function Services() {
 
           <ul className="lg:col-span-8">
             {services.map((service) =>
-            <li key={service.id} className="border-t border-bone-200 py-8 last:border-b">
+            <li key={service.id} className="border-t border-bone-200 py-6 last:border-b sm:py-8">
                 <div className="grid gap-4 md:grid-cols-12 md:gap-8">
                   <h3 className="font-display text-xl font-bold leading-snug tracking-tight text-ink-900 md:col-span-4">
                     {service.title}

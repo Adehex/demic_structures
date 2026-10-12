@@ -13,6 +13,38 @@ export type Project = {
 
 export const projects: Project[] = [
 {
+  id: 'warehouse-120',
+  name: '120m Warehouse — Site Prep',
+  type: '120m × 24m industrial warehouse',
+  location: 'Interchange, Ogun State',
+  year: '2026',
+  status: 'In progress',
+  duration: 'Ongoing — foundation trenches',
+  scope: 'Clearing, grading, setting out, excavation',
+  image: "/one.jpg",
+  highlights: [
+  'Full plot cleared and graded with a wheel loader',
+  '2,880 m² footprint set out on profile boards and string lines',
+  'Foundation trenches excavated to the engineer’s levels']
+
+},
+{
+  id: 'seasoning-store',
+  name: 'Seasoning Store',
+  type: 'Industrial storage block',
+  location: 'Interchange, Ogun State',
+  year: '2026',
+  status: 'Completed',
+  duration: 'Built on a live factory site',
+  scope: 'Blockwork, roofing, render, steel doors, finishing',
+  image: "/WhatsApp_Image_2026-10-09_at_16.41.10_2.jpg",
+  highlights: [
+  'Built against an existing warehouse without halting production',
+  'Three steel sliding doors fabricated and hung on overhead tracks',
+  'Finished to match the facility’s colours and rooflines']
+
+},
+{
   id: 'ridgeview',
   name: 'Ridgeview Duplex',
   type: '5-bedroom duplex + penthouse',
@@ -58,22 +90,6 @@ export const projects: Project[] = [
   'Hipped roof in architectural shingle over timber trusses',
   'Interlocking paved driveway and soft landscaping',
   'Delivered three weeks ahead of programme']
-
-},
-{
-  id: 'cedar',
-  name: 'Cedar Terraces — Shell & Core',
-  type: '6-unit terrace development',
-  location: 'Lugbe, Abuja',
-  year: '2026',
-  status: 'In progress',
-  duration: 'Ongoing — 60% complete',
-  scope: 'Substructure, frame, blockwork',
-  image: "/75798f36-6e46-4044-9e78-e106b6482e8e.jpg",
-  highlights: [
-  'Six units built in two phased pours to protect cash flow',
-  'Concrete cube tests logged at every slab stage',
-  'Weekly photo report issued to the client']
 
 },
 {

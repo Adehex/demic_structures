@@ -1,4 +1,3 @@
-import React from 'react';
 import { Wordmark } from './Wordmark';
 import { company } from '../data/company';
 
@@ -25,10 +24,10 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-bone-200 bg-bone-50 py-14">
-      <div className="mx-auto max-w-shell px-6 lg:px-10">
-        <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+    <footer className="border-t border-bone-200 bg-bone-50 pb-28 pt-12 lg:py-14">
+      <div className="mx-auto max-w-shell px-5 sm:px-6 lg:px-10">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-12">
+          <div className="col-span-2 lg:col-span-5">
             <Wordmark tone="dark" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-600">{company.tagline}</p>
             <p className="mt-4 text-sm text-ink-600">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CalendarIcon, MapPinIcon, RulerIcon } from 'lucide-react';
 import { projects } from '../data/projects';
@@ -10,22 +10,22 @@ export function Projects() {
   const active = projects.find((p) => p.id === activeId) ?? projects[0];
 
   return (
-    <section id="projects" className="bg-ink-950 py-20 lg:py-28">
-      <div className="mx-auto max-w-shell px-6 lg:px-10">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+    <section id="projects" className="bg-ink-950 py-16 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-shell px-5 sm:px-6 lg:px-10">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-6">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal">Selected projects</p>
-            <h2 className="mt-5 font-display text-3xl font-bold leading-tight tracking-tightest text-white sm:text-4xl lg:text-[2.85rem]">
+            <h2 className="mt-4 font-display text-3xl font-bold leading-tight tracking-tightest text-white sm:mt-5 sm:text-4xl lg:text-[2.85rem]">
               Buildings we stand behind.
             </h2>
           </div>
           <p className="max-w-sm text-[15px] leading-relaxed text-bone-100/70">
-            Five of the last builds handed over or currently on site. Pick one to see the scope, the programme and how it
-            was delivered.
+            Recent builds handed over or currently on site. Pick one to see the scope, the programme and how it was
+            delivered.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-10">
+        <div className="mt-8 grid gap-6 sm:mt-12 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-8">
             <AnimatePresence mode="wait">
               <motion.figure
@@ -33,15 +33,15 @@ export function Projects() {
                 initial={{ opacity: 0, scale: 0.985 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.28, ease }}
+                transition={{ duration: 0.24, ease }}
                 className="relative overflow-hidden rounded-sm">
                 
                 <img
                   src={active.image}
                   alt={`${active.name} — ${active.type} in ${active.location}`}
-                  className="aspect-[16/10] w-full object-cover" />
+                  className="aspect-[4/3] w-full object-cover sm:aspect-[16/10]" />
                 
-                <figcaption className="absolute left-0 top-0 m-4 flex items-center gap-2 bg-ink-950/85 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white">
+                <figcaption className="absolute left-0 top-0 m-3 flex items-center gap-2 bg-ink-950/85 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white sm:m-4">
                   <span
                     className={`h-2 w-2 rounded-full ${active.status === 'In progress' ? 'bg-signal' : 'bg-emerald-400'}`}
                     aria-hidden="true" />
@@ -50,6 +50,32 @@ export function Projects() {
                 </figcaption>
               </motion.figure>
             </AnimatePresence>
+
+            {/* Phone thumbnail strip — sits right under the image so taps update what's in view */}
+            <div
+              role="tablist"
+              aria-label="Project gallery"
+              className="-mx-5 mt-3 flex snap-x gap-2 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:-mx-6 sm:px-6 lg:hidden [&::-webkit-scrollbar]:hidden">
+              
+              {projects.map((project) => {
+                const isActive = project.id === active.id;
+                return (
+                  <button
+                    key={project.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    aria-label={project.name}
+                    onClick={() => setActiveId(project.id)}
+                    className={`shrink-0 snap-start overflow-hidden rounded-sm border-2 transition-colors duration-150 ease-out ${
+                    isActive ? 'border-signal' : 'border-transparent opacity-70'}`
+                    }>
+                    
+                    <img src={project.image} alt="" className="h-16 w-24 object-cover" />
+                  </button>);
+
+              })}
+            </div>
           </div>
 
           <div className="flex flex-col lg:col-span-4">
@@ -58,7 +84,7 @@ export function Projects() {
             </h3>
             <p className="mt-2 text-[15px] text-signal">{active.type}</p>
 
-            <dl className="mt-6 space-y-4 border-t border-white/10 pt-6 text-sm">
+            <dl className="mt-5 space-y-3.5 border-t border-white/10 pt-5 text-sm lg:mt-6 lg:space-y-4 lg:pt-6">
               <div className="flex items-start gap-3">
                 <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-ink-400" aria-hidden="true" />
                 <dt className="sr-only">Location</dt>
@@ -78,7 +104,7 @@ export function Projects() {
               </div>
             </dl>
 
-            <ul className="mt-6 space-y-3 border-t border-white/10 pt-6">
+            <ul className="mt-5 space-y-3 border-t border-white/10 pt-5 lg:mt-6 lg:pt-6">
               {active.highlights.map((item) =>
               <li key={item} className="flex gap-3 text-sm leading-relaxed text-bone-100/70">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-signal" aria-hidden="true" />
@@ -89,11 +115,8 @@ export function Projects() {
           </div>
         </div>
 
-        <div
-          role="tablist"
-          aria-label="Project gallery"
-          className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-          
+        {/* Desktop gallery */}
+        <div role="tablist" aria-label="Project gallery" className="mt-10 hidden grid-cols-6 gap-4 lg:grid">
           {projects.map((project) => {
             const isActive = project.id === active.id;
             return (
