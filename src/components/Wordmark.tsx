@@ -1,18 +1,20 @@
-import { company } from '../data/company';
+import React from 'react';
+import { useSiteContent } from '../contexts/SiteContentContext';
 
 type WordmarkProps = {
   tone?: 'light' | 'dark';
 };
 
-export function Wordmark({ tone: _tone = 'dark' }: WordmarkProps) {
-  const primaryColor = _tone === 'light' ? '#FFFFFF' : '#141516';
-  const secondaryColor = _tone === 'light' ? '#E6E3DB' : '#4A4E52';
+export function Wordmark({ tone = 'dark' }: WordmarkProps) {
+  const { company } = useSiteContent().content;
+  const primaryColor = tone === 'light' ? '#FFFFFF' : '#141516';
+  const secondaryColor = tone === 'light' ? '#E6E3DB' : '#4A4E52';
 
   return (
     <a
       href="#top"
       className="group flex shrink-0 items-center"
-      aria-label="Demic Structures - home"
+      aria-label={`${company.name} — home`}
       style={{ display: 'flex', alignItems: 'center', gap: 0, flexShrink: 0 }}
     >
       <span
@@ -24,7 +26,7 @@ export function Wordmark({ tone: _tone = 'dark' }: WordmarkProps) {
           minWidth: '54px',
           maxWidth: '54px',
           flexShrink: 0,
-          backgroundImage: `url(${company.logo})`,
+          backgroundImage: `url(${company.logo || '/demic-logo.png'})`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'contain',

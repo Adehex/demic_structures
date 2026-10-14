@@ -1,3 +1,4 @@
+import React from 'react';
 
 type FootprintProps = {
   length: number;
@@ -24,7 +25,7 @@ export function Footprint({ length, width }: FootprintProps) {
             
             {/* Bay lines every 6m for a sense of scale */}
             <div className="absolute inset-0 flex">
-              {Array.from({ length: length / 6 }).map((_, i) =>
+              {Array.from({ length: Math.min(60, Math.max(1, Math.round(length / 6))) }).map((_, i) =>
               <span key={i} className="h-full flex-1 border-r border-ink-900/10 last:border-0" />
               )}
             </div>

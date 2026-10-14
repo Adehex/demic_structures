@@ -1,3 +1,4 @@
+import React from 'react';
 import { QuoteIcon } from 'lucide-react';
 
 const siteImage = "/75798f36-6e46-4044-9e78-e106b6482e8e.jpg";

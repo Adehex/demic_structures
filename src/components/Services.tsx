@@ -1,6 +1,8 @@
-import { services } from '../data/services';
+import React from 'react';
+import { useSiteContent } from '../contexts/SiteContentContext';
 
 export function Services() {
+  const { services } = useSiteContent().content;
   return (
     <section id="services" className="bg-white py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-shell px-5 sm:px-6 lg:px-10">

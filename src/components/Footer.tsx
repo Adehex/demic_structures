@@ -1,5 +1,7 @@
+import React from 'react';
 import { Wordmark } from './Wordmark';
-import { company } from '../data/company';
+import { Link } from 'react-router-dom';
+import { useSiteContent } from '../contexts/SiteContentContext';
 
 const columns = [
 {
@@ -23,6 +25,7 @@ const columns = [
 
 
 export function Footer() {
+  const { company } = useSiteContent().content;
   return (
     <footer className="border-t border-bone-200 bg-bone-50 pb-28 pt-12 lg:py-14">
       <div className="mx-auto max-w-shell px-5 sm:px-6 lg:px-10">
@@ -71,7 +74,12 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-2 border-t border-bone-200 pt-6 text-xs text-ink-600 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
-          <p>Registered building contractor · Nigeria</p>
+          <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span>Registered building contractor · Nigeria</span>
+            <Link to="/admin" className="font-medium text-ink-900 underline decoration-bone-200 underline-offset-4 hover:decoration-ink-900">
+              Client portal
+            </Link>
+          </p>
         </div>
       </div>
     </footer>);

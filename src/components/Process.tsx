@@ -1,6 +1,8 @@
-import { processSteps } from '../data/services';
+import React from 'react';
+import { useSiteContent } from '../contexts/SiteContentContext';
 
 export function Process() {
+  const { processSteps } = useSiteContent().content;
   return (
     <section id="process" className="bg-bone-100 py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-shell px-5 sm:px-6 lg:px-10">

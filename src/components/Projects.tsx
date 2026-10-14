@@ -1,13 +1,17 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CalendarIcon, MapPinIcon, RulerIcon } from 'lucide-react';
-import { projects } from '../data/projects';
+import { useSiteContent } from '../contexts/SiteContentContext';
 
 const ease = [0.23, 1, 0.32, 1] as const;
 
 export function Projects() {
-  const [activeId, setActiveId] = useState(projects[0].id);
+  // Projects without a photo are drafts and stay off the public site.
+  const projects = useSiteContent().content.projects.filter((p) => p.image);
+  const [activeId, setActiveId] = useState(projects[0]?.id);
   const active = projects.find((p) => p.id === activeId) ?? projects[0];
+
+  if (!active) return null;
 
   return (
     <section id="projects" className="bg-ink-950 py-16 sm:py-20 lg:py-28">
@@ -112,6 +116,16 @@ export function Projects() {
                 </li>
               )}
             </ul>
+
+            {(active.id === 'seasoning-store' || active.id === 'warehouse-120') && (
+              <div className="mt-6 border-t border-white/10 pt-5">
+                <a
+                  href={active.id === 'seasoning-store' ? '#site-seasoning-store' : '#site-warehouse'}
+                  className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-ink-950 transition-colors duration-150 ease-out hover:bg-white">
+                  View live build diary & stages →
+                </a>
+              </div>
+            )}
           </div>
         </div>
 

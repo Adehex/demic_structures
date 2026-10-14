@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, PanInfo } from 'framer-motion';
 import { CalendarClockIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import { BuildStage, StageStatus } from '../../data/caseStudy';
@@ -19,35 +19,26 @@ const statusLabel: Record<StageStatus, string> = {
 export function StageViewer({ stages }: StageViewerProps) {
   const [stageIndex, setStageIndex] = useState(0);
   const [photoIndex, setPhotoIndex] = useState(0);
-  const tablistRef = useRef<HTMLDivElement | null>(null);
   const chipRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
   const isFirstRender = useRef(true);
-  const stage = stages[stageIndex];
-  const photo = stage.photos[photoIndex] ?? stage.photos[0];
-  const multi = stage.photos.length > 1;
+  const stage = stages[Math.min(stageIndex, stages.length - 1)];
+  const photo = stage?.photos[photoIndex] ?? stage?.photos[0];
+  const multi = (stage?.photos.length ?? 0) > 1;
 
+  // Keep the active chip centred in the horizontal scroller without moving the page itself.
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
       return;
     }
-
-    const container = tablistRef.current;
+    const scroller = scrollerRef.current;
     const chip = chipRefs.current[stageIndex];
-    if (container && chip) {
-      const containerRect = container.getBoundingClientRect();
-      const chipRect = chip.getBoundingClientRect();
-      const targetScrollLeft =
-        container.scrollLeft +
-        (chipRect.left - containerRect.left) -
-        (container.clientWidth / 2) +
-        (chipRect.width / 2);
-
-      container.scrollTo({
-        left: Math.max(0, targetScrollLeft),
-        behavior: 'smooth'
-      });
-    }
+    if (!scroller || !chip || scroller.scrollWidth <= scroller.clientWidth) return;
+    scroller.scrollTo({
+      left: chip.offsetLeft - scroller.clientWidth / 2 + chip.clientWidth / 2,
+      behavior: 'smooth'
+    });
   }, [stageIndex]);
 
   const goToStage = (index: number) => {
@@ -63,15 +54,17 @@ export function StageViewer({ stages }: StageViewerProps) {
     if (info.offset.x > SWIPE_THRESHOLD) step(-1);
   };
 
+  if (!stage) return null;
+
   return (
     <div>
       {/* Stage selector — scrollable chips on phones, progress bar on larger screens */}
       <div
-        ref={tablistRef}
+        ref={scrollerRef}
         role="tablist"
         aria-label="Construction stages"
         style={{ gridTemplateColumns: `repeat(${stages.length}, minmax(0, 1fr))` }}
-        className="-mx-5 flex snap-x gap-2 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:-mx-6 sm:px-6 md:mx-0 md:grid md:gap-0 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden">
+        className="relative -mx-5 flex snap-x gap-2 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:-mx-6 sm:px-6 md:mx-0 md:grid md:gap-0 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden">
         
         {stages.map((s, i) => {
           const isActive = i === stageIndex;

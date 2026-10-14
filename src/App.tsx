@@ -1,31 +1,29 @@
-import { Nav } from './components/Nav';
-import { Hero } from './components/Hero';
-import { CaseStudy } from './components/CaseStudy/CaseStudy';
-import { About } from './components/About';
-import { Projects } from './components/Projects';
-import { Services } from './components/Services';
-import { Process } from './components/Process';
-import { Testimonial } from './components/Testimonial';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
-import { MobileActionBar } from './components/MobileActionBar';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { SiteContentProvider } from './contexts/SiteContentContext';
+import { Home } from './pages/Home';
+import { AdminPortal } from './pages/admin/AdminPortal';
+import { Overview } from './pages/admin/Overview';
+import { SitesEditor } from './pages/admin/SitesEditor';
+import { ProjectsEditor } from './pages/admin/ProjectsEditor';
+import { BusinessEditor } from './pages/admin/BusinessEditor';
+import { ServicesEditor } from './pages/admin/ServicesEditor';
 
 export function App() {
   return (
-    <div className="min-h-full w-full bg-bone-50 font-sans">
-      <Nav />
-      <main>
-        <Hero />
-        <CaseStudy />
-        <About />
-        <Projects />
-        <Services />
-        <Process />
-        <Testimonial />
-        <Contact />
-      </main>
-      <Footer />
-      <MobileActionBar />
-    </div>);
-
+    <SiteContentProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/admin" element={<AdminPortal />}>
+            <Route index element={<Overview />} />
+            <Route path="sites" element={<SitesEditor />} />
+            <Route path="projects" element={<ProjectsEditor />} />
+            <Route path="business" element={<BusinessEditor />} />
+            <Route path="services" element={<ServicesEditor />} />
+          </Route>
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </SiteContentProvider>
+  );
 }

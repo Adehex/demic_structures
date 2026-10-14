@@ -1,3 +1,4 @@
+import React from 'react';
 import { SiteVideo } from '../../data/caseStudy';
 
 type SiteVideosProps = {
@@ -6,7 +7,8 @@ type SiteVideosProps = {
   projectName: string;
 };
 
-export function SiteVideos({ videos, note, projectName }: SiteVideosProps) {
+export function SiteVideos({ videos: allVideos, note, projectName }: SiteVideosProps) {
+  const videos = allVideos.filter((v) => v.src.trim());
   if (videos.length === 0) return null;
 
   return (

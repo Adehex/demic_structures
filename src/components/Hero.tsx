@@ -1,11 +1,13 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon, MapPinIcon } from 'lucide-react';
-import { company } from '../data/company';
+import { useSiteContent } from '../contexts/SiteContentContext';
 
 const heroImage = "/photo_2026-08-25_13-33-14.jpg";
 const ease = [0.23, 1, 0.32, 1] as const;
 
 export function Hero() {
+  const { company } = useSiteContent().content;
   return (
     <section id="top" className="relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden bg-ink-950 lg:min-h-[92vh]">
       <img
@@ -13,7 +15,7 @@ export function Hero() {
         alt="Completed contemporary three-storey residence built by Demic Structures in Lekki, Lagos"
         className="absolute inset-0 h-full w-full object-cover object-center" />
       
-      <div className="absolute inset-0 bg-ink-950/30" aria-hidden="true" />
+      <div className="absolute inset-0 bg-ink-950/72" aria-hidden="true" />
       <div className="absolute inset-x-0 bottom-0 h-40 bg-ink-950/60" aria-hidden="true" />
 
       <div className="relative mx-auto w-full max-w-shell px-5 pb-10 pt-28 sm:px-6 sm:pb-14 sm:pt-32 lg:px-10 lg:pb-20">
