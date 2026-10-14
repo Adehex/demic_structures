@@ -19,13 +19,35 @@ const statusLabel: Record<StageStatus, string> = {
 export function StageViewer({ stages }: StageViewerProps) {
   const [stageIndex, setStageIndex] = useState(0);
   const [photoIndex, setPhotoIndex] = useState(0);
+  const tablistRef = useRef<HTMLDivElement | null>(null);
   const chipRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const isFirstRender = useRef(true);
   const stage = stages[stageIndex];
   const photo = stage.photos[photoIndex] ?? stage.photos[0];
   const multi = stage.photos.length > 1;
 
   useEffect(() => {
-    chipRefs.current[stageIndex]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    const container = tablistRef.current;
+    const chip = chipRefs.current[stageIndex];
+    if (container && chip) {
+      const containerRect = container.getBoundingClientRect();
+      const chipRect = chip.getBoundingClientRect();
+      const targetScrollLeft =
+        container.scrollLeft +
+        (chipRect.left - containerRect.left) -
+        (container.clientWidth / 2) +
+        (chipRect.width / 2);
+
+      container.scrollTo({
+        left: Math.max(0, targetScrollLeft),
+        behavior: 'smooth'
+      });
+    }
   }, [stageIndex]);
 
   const goToStage = (index: number) => {
@@ -45,6 +67,7 @@ export function StageViewer({ stages }: StageViewerProps) {
     <div>
       {/* Stage selector — scrollable chips on phones, progress bar on larger screens */}
       <div
+        ref={tablistRef}
         role="tablist"
         aria-label="Construction stages"
         style={{ gridTemplateColumns: `repeat(${stages.length}, minmax(0, 1fr))` }}
