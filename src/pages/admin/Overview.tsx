@@ -11,17 +11,27 @@ export function Overview() {
 
   const sections = [
   {
-    to: '/admin/sites',
+    to: '/ademola/media',
+    title: 'Media Database',
+    detail: 'All project photos and inspection videos stored on disk and cloud'
+  },
+  {
+    to: '/ademola/inquiries',
+    title: 'Client Inquiries',
+    detail: 'Quote requests and briefs submitted by website visitors'
+  },
+  {
+    to: '/ademola/sites',
     title: 'Live sites',
     detail: `${content.caseStudies.length} site diar${content.caseStudies.length === 1 ? 'y' : 'ies'} · ${liveSites.length} in progress`
   },
   {
-    to: '/admin/projects',
+    to: '/ademola/projects',
     title: 'Projects gallery',
     detail: `${content.projects.length} projects${draftProjects ? ` · ${draftProjects} missing a photo` : ''}`
   },
-  { to: '/admin/business', title: 'Business details', detail: `${content.company.phones.join(', ')} · ${content.company.email}` },
-  { to: '/admin/services', title: 'Services', detail: `${content.services.length} service packages · ${content.processSteps.length} process steps` }];
+  { to: '/ademola/business', title: 'Business details', detail: `${content.company.phones.join(', ')} · ${content.company.email}` },
+  { to: '/ademola/services', title: 'Services', detail: `${content.services.length} service packages · ${content.processSteps.length} process steps` }];
 
 
   return (
@@ -47,7 +57,7 @@ export function Overview() {
                     </p>
                   </div>
                   <Link
-                  to={`/admin/sites?site=${site.id}`}
+                  to={`/ademola/sites?site=${site.id}`}
                   className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-signal px-5 py-2.5 text-sm font-semibold text-ink-950 transition-colors duration-150 ease-out hover:bg-white">
                   
                     <CameraIcon className="h-4 w-4" />
@@ -61,7 +71,7 @@ export function Overview() {
         <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-bone-100/70">No sites are marked in progress.</p>
             <Link
-            to="/admin/sites"
+            to="/ademola/sites"
             className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-2.5 text-sm font-semibold text-ink-950">
             
               Start a site diary

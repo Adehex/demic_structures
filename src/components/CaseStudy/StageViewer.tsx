@@ -17,11 +17,20 @@ const statusLabel: Record<StageStatus, string> = {
 };
 
 export function StageViewer({ stages }: StageViewerProps) {
-  const [stageIndex, setStageIndex] = useState(0);
+  const initialCurrentIndex = stages.findIndex((s) => s.status === 'current');
+  const [stageIndex, setStageIndex] = useState(initialCurrentIndex >= 0 ? initialCurrentIndex : 0);
   const [photoIndex, setPhotoIndex] = useState(0);
   const chipRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    const current = stages.findIndex((s) => s.status === 'current');
+    if (current >= 0) {
+      setStageIndex(current);
+      setPhotoIndex(0);
+    }
+  }, [stages]);
   const stage = stages[Math.min(stageIndex, stages.length - 1)];
   const photo = stage?.photos[photoIndex] ?? stage?.photos[0];
   const multi = (stage?.photos.length ?? 0) > 1;

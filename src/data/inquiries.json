@@ -1,0 +1,25 @@
+[
+  {
+    "id": "inq_1792035878894",
+    "name": "Adekunle Testing",
+    "phone": "09039210309",
+    "type": "New build — bungalow",
+    "location": "Akure",
+    "message": "A duplex on 10 plots of land",
+    "createdAt": "2026-10-15T03:44:38.894Z",
+    "status": "new",
+    "notificationSent": false,
+    "notifiedEmail": "adekunlehenry04@gmail.com",
+    "notificationError": "Web3Forms free tier requires browser-side submission (use test button in portal)."
+  },
+  {
+    "id": "inq_1792009925928",
+    "name": "Adekunle Henry",
+    "phone": "09039210309",
+    "type": "New build — bungalow",
+    "location": "Portharcourt",
+    "message": "3 plots of land for duplex",
+    "createdAt": "2026-10-14T20:32:05.928Z",
+    "status": "contacted"
+  }
+]

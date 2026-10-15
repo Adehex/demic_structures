@@ -113,15 +113,12 @@ export function Nav() {
             )}
 
               <div className="mt-8 space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-400">Call or WhatsApp</p>
-                {company.phones.map((phone) =>
-              <a key={phone} href={`tel:${phone}`} className="block font-display text-lg font-semibold text-white">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-400">Phone Enquiries</p>
+                {company.phones.map((phone) => (
+                  <a key={phone} href={`tel:${phone}`} className="block font-display text-lg font-semibold text-white">
                     {phone}
                   </a>
-              )}
-                <a href={`mailto:${company.email}`} className="block break-all pt-1 text-[15px] text-bone-100/80">
-                  {company.email}
-                </a>
+                ))}
               </div>
 
               <a

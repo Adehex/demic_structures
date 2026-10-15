@@ -3,11 +3,15 @@ import { Link, NavLink, Outlet } from 'react-router-dom';
 import {
   BriefcaseIcon,
   Building2Icon,
+  CheckIcon,
   ExternalLinkIcon,
   HardHatIcon,
+  ImageIcon,
   LayoutDashboardIcon,
   LogOutIcon,
+  MessageSquareIcon,
   RotateCcwIcon,
+  UploadCloudIcon,
   WrenchIcon } from
 'lucide-react';
 import { Wordmark } from '../Wordmark';
@@ -19,15 +23,17 @@ type AdminShellProps = {
 };
 
 const navItems = [
-{ to: '/admin', label: 'Overview', icon: LayoutDashboardIcon, end: true },
-{ to: '/admin/sites', label: 'Live sites', icon: HardHatIcon },
-{ to: '/admin/projects', label: 'Projects', icon: Building2Icon },
-{ to: '/admin/business', label: 'Business details', icon: BriefcaseIcon },
-{ to: '/admin/services', label: 'Services', icon: WrenchIcon }];
+{ to: '/ademola', label: 'Overview', icon: LayoutDashboardIcon, end: true },
+{ to: '/ademola/media', label: 'Media Library', icon: ImageIcon },
+{ to: '/ademola/inquiries', label: 'Inquiries', icon: MessageSquareIcon },
+{ to: '/ademola/sites', label: 'Live sites', icon: HardHatIcon },
+{ to: '/ademola/projects', label: 'Projects', icon: Building2Icon },
+{ to: '/ademola/business', label: 'Business details', icon: BriefcaseIcon },
+{ to: '/ademola/services', label: 'Services', icon: WrenchIcon }];
 
 
 export function AdminShell({ onLogout }: AdminShellProps) {
-  const { resetContent, isCustomised } = useSiteContent();
+  const { resetContent, isCustomised, saveContent, isSaving, hasUnsavedChanges, saveMessage } = useSiteContent();
 
   const handleReset = () => {
     if (window.confirm('Undo every change made in the portal and restore the original website content?')) resetContent();
@@ -128,15 +134,62 @@ export function AdminShell({ onLogout }: AdminShellProps) {
           </nav>
         </header>
 
-        <div className="border-b border-bone-200 bg-white">
-          <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-5 py-3 lg:px-10">
-            <SaveIndicator />
-            {isCustomised &&
-            <button type="button" onClick={handleReset} className="shrink-0 text-xs font-semibold text-ink-600 hover:text-ink-900 lg:hidden">
-                Restore original
+        <div className="sticky top-0 z-20 border-b border-bone-200 bg-white/95 backdrop-blur-md shadow-sm">
+          <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-3 px-5 py-2.5 lg:px-10">
+            <div className="flex items-center gap-3">
+              <SaveIndicator />
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => saveContent()}
+                disabled={isSaving || !hasUnsavedChanges}
+                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all duration-150 ${
+                  hasUnsavedChanges
+                    ? 'bg-signal text-ink-950 shadow-md hover:bg-signal-dark active:scale-95 ring-2 ring-signal/50 cursor-pointer'
+                    : 'bg-bone-100 text-ink-400 cursor-default'
+                }`}>
+                {isSaving ? (
+                  <>
+                    <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                    Saving...
+                  </>
+                ) : hasUnsavedChanges ? (
+                  <>
+                    <UploadCloudIcon className="h-4 w-4" />
+                    Save Changes
+                  </>
+                ) : (
+                  <>
+                    <CheckIcon className="h-4 w-4 text-emerald-600" />
+                    Saved
+                  </>
+                )}
               </button>
-            }
+              <a
+                href="/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-bone-200 bg-white px-3 py-2 text-xs font-semibold text-ink-800 transition-colors hover:border-ink-900 hover:text-ink-900">
+                <ExternalLinkIcon className="h-3.5 w-3.5" />
+                <span className="hidden sm:inline">View Website</span>
+              </a>
+              {isCustomised && (
+                <button
+                  type="button"
+                  onClick={handleReset}
+                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-xs font-semibold text-ink-500 hover:text-red-700">
+                  <RotateCcwIcon className="h-3 w-3" />
+                  <span className="hidden md:inline">Reset</span>
+                </button>
+              )}
+            </div>
           </div>
+          {saveMessage && (
+            <div className="border-t border-emerald-200 bg-emerald-50 px-5 py-2 text-center text-xs font-medium text-emerald-800">
+              {saveMessage}
+            </div>
+          )}
         </div>
 
         <main className="mx-auto max-w-4xl px-5 py-8 lg:px-10 lg:py-12">

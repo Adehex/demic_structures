@@ -1,0 +1,13 @@
+{
+  "provider": "local",
+  "cloudinary": {
+    "cloudName": "",
+    "uploadPreset": "",
+    "apiKey": ""
+  },
+  "supabase": {
+    "url": "",
+    "anonKey": "",
+    "bucket": "media"
+  }
+}

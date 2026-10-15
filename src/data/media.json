@@ -1,0 +1,101 @@
+[
+  {
+    "id": "med_hero_residence",
+    "filename": "photo_2026-08-25_13-33-14.jpg",
+    "originalName": "Three-Storey Contemporary Residence.jpg",
+    "url": "/photo_2026-08-25_13-33-14.jpg",
+    "mimeType": "image/jpeg",
+    "size": 282916,
+    "type": "image",
+    "uploadedAt": "2026-08-25T13:33:14.000Z",
+    "provider": "local"
+  },
+  {
+    "id": "med_ridgeview_duplex",
+    "filename": "photo_2026-08-25_13-33-03.jpg",
+    "originalName": "Ridgeview Duplex Guzape.jpg",
+    "url": "/photo_2026-08-25_13-33-03.jpg",
+    "mimeType": "image/jpeg",
+    "size": 149276,
+    "type": "image",
+    "uploadedAt": "2026-08-25T13:33:03.000Z",
+    "provider": "local"
+  },
+  {
+    "id": "med_warehouse_site_prep",
+    "filename": "one.jpg",
+    "originalName": "120m Warehouse Site Prep.jpg",
+    "url": "/one.jpg",
+    "mimeType": "image/jpeg",
+    "size": 99523,
+    "type": "image",
+    "uploadedAt": "2026-10-12T04:56:00.000Z",
+    "provider": "local"
+  },
+  {
+    "id": "med_seasoning_store",
+    "filename": "WhatsApp_Image_2026-10-09_at_16.41.10_2.jpg",
+    "originalName": "Seasoning Store Completed.jpg",
+    "url": "/WhatsApp_Image_2026-10-09_at_16.41.10_2.jpg",
+    "mimeType": "image/jpeg",
+    "size": 57485,
+    "type": "image",
+    "uploadedAt": "2026-10-09T16:41:10.000Z",
+    "provider": "local"
+  },
+  {
+    "id": "med_blockwork_site",
+    "filename": "75798f36-6e46-4044-9e78-e106b6482e8e.jpg",
+    "originalName": "Blockwork Construction Crew.jpg",
+    "url": "/75798f36-6e46-4044-9e78-e106b6482e8e.jpg",
+    "mimeType": "image/jpeg",
+    "size": 294692,
+    "type": "image",
+    "uploadedAt": "2026-08-25T14:02:00.000Z",
+    "provider": "local"
+  },
+  {
+    "id": "med_video_clip1",
+    "filename": "WhatsApp Video 2026-10-09 at 16.32.54.mp4",
+    "originalName": "Site Inspection Clip 1.mp4",
+    "url": "/WhatsApp Video 2026-10-09 at 16.32.54.mp4",
+    "mimeType": "video/mp4",
+    "size": 927592,
+    "type": "video",
+    "uploadedAt": "2026-10-09T16:32:54.000Z",
+    "provider": "local"
+  },
+  {
+    "id": "med_video_clip2",
+    "filename": "WhatsApp Video 2026-10-09 at 16.32.54 2.mp4",
+    "originalName": "Site Inspection Clip 2.mp4",
+    "url": "/WhatsApp Video 2026-10-09 at 16.32.54 2.mp4",
+    "mimeType": "video/mp4",
+    "size": 1099310,
+    "type": "video",
+    "uploadedAt": "2026-10-09T16:32:54.000Z",
+    "provider": "local"
+  },
+  {
+    "id": "med_video_clip3",
+    "filename": "WhatsApp Video 2026-10-09 at 16.32.55.mp4",
+    "originalName": "Foundation Pouring Clip 3.mp4",
+    "url": "/WhatsApp Video 2026-10-09 at 16.32.55.mp4",
+    "mimeType": "video/mp4",
+    "size": 1094628,
+    "type": "video",
+    "uploadedAt": "2026-10-09T16:32:55.000Z",
+    "provider": "local"
+  },
+  {
+    "id": "med_video_clip4",
+    "filename": "WhatsApp Video 2026-10-09 at 16.32.55 2.mp4",
+    "originalName": "Steel Frame & Roof Clip 4.mp4",
+    "url": "/WhatsApp Video 2026-10-09 at 16.32.55 2.mp4",
+    "mimeType": "video/mp4",
+    "size": 3222043,
+    "type": "video",
+    "uploadedAt": "2026-10-09T16:32:55.000Z",
+    "provider": "local"
+  }
+]

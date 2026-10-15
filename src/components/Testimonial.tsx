@@ -19,9 +19,6 @@ export function Testimonial() {
               “I was in London for the whole build. Every Friday I got photos, what was bought and what came next. I
               came home to a house that matched the drawings and the budget.”
             </p>
-            <footer className="mt-7 text-sm text-bone-100/70">
-              <span className="font-semibold text-white">Mrs. A. Eze</span> — Ridgeview Duplex, Guzape, Abuja
-            </footer>
           </blockquote>
         </div>
       </div>

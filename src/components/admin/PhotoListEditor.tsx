@@ -1,10 +1,12 @@
 import React, { useId, useRef, useState } from 'react';
-import { ArrowLeftIcon, ArrowRightIcon, Loader2Icon, PlusIcon, Trash2Icon, UploadIcon } from 'lucide-react';
+import { ArrowLeftIcon, ArrowRightIcon, FolderOpenIcon, Loader2Icon, PlusIcon, Trash2Icon, UploadIcon } from 'lucide-react';
 import type { StagePhoto } from '../../data/caseStudy';
 import { inputClass } from './Field';
 import { IconButton } from './IconButton';
 import { moveItem, removeAt, replaceAt } from '../../utils/array';
-import { resizeImageFile } from '../../utils/image';
+import { uploadMediaFile } from '../../utils/mediaUpload';
+import { MediaPickerModal } from './MediaPickerModal';
+import type { MediaItem } from '../../types/media';
 
 type PhotoListEditorProps = {
   photos: StagePhoto[];
@@ -17,6 +19,7 @@ export function PhotoListEditor({ photos, onChange, defaultAlt }: PhotoListEdito
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [link, setLink] = useState('');
+  const [pickerOpen, setPickerOpen] = useState(false);
   const linkId = useId();
 
   const handleFiles = async (files: FileList | null) => {
@@ -27,7 +30,8 @@ export function PhotoListEditor({ photos, onChange, defaultAlt }: PhotoListEdito
     const failures: string[] = [];
     for (const file of Array.from(files)) {
       try {
-        added.push({ src: await resizeImageFile(file), alt: defaultAlt });
+        const item = await uploadMediaFile(file);
+        added.push({ src: item.url, alt: defaultAlt });
       } catch (err) {
         failures.push(err instanceof Error ? err.message : file.name);
       }
@@ -36,6 +40,11 @@ export function PhotoListEditor({ photos, onChange, defaultAlt }: PhotoListEdito
     if (failures.length) setError(failures.join(' '));
     setBusy(false);
     if (fileRef.current) fileRef.current.value = '';
+  };
+
+  const handleSelectFromLibrary = (item: MediaItem) => {
+    onChange([...photos, { src: item.url, alt: defaultAlt }]);
+    setPickerOpen(false);
   };
 
   const addLink = () => {
@@ -102,8 +111,17 @@ export function PhotoListEditor({ photos, onChange, defaultAlt }: PhotoListEdito
           className="inline-flex items-center justify-center gap-2 rounded-md bg-ink-900 px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-150 ease-out hover:bg-ink-700 disabled:opacity-60">
           
           {busy ? <Loader2Icon className="h-4 w-4 animate-spin" /> : <UploadIcon className="h-4 w-4" />}
-          {busy ? 'Processing photos…' : 'Upload photos'}
+          {busy ? 'Uploading…' : 'Upload photos'}
         </button>
+
+        <button
+          type="button"
+          onClick={() => setPickerOpen(true)}
+          className="inline-flex items-center justify-center gap-2 rounded-md border border-bone-300 bg-white px-3.5 py-2.5 text-sm font-semibold text-ink-900 shadow-sm transition hover:bg-bone-50 hover:border-ink-900">
+          <FolderOpenIcon className="h-4 w-4 text-ink-600" />
+          Choose from Library
+        </button>
+
         <input
           ref={fileRef}
           type="file"
@@ -142,6 +160,14 @@ export function PhotoListEditor({ photos, onChange, defaultAlt }: PhotoListEdito
           {error}
         </p>
       }
+
+      <MediaPickerModal
+        isOpen={pickerOpen}
+        onClose={() => setPickerOpen(false)}
+        onSelect={handleSelectFromLibrary}
+        typeFilter="image"
+        title="Select Photo from Media Library"
+      />
     </div>);
 
 }

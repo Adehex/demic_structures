@@ -1,0 +1,629 @@
+{
+  "company": {
+    "name": "Demic Structures",
+    "tagline": "We build it right, from ground to greatness.",
+    "logo": "/demic-logo.png",
+    "email": "demicstructures@gmail.com",
+    "phones": [
+      "09055428446",
+      "08027116110"
+    ],
+    "hours": "Mon – Sat, 8:00am – 6:00pm",
+    "serviceAreas": [
+      "Abuja",
+      "Enugu",
+      "Lagos",
+      "Ogun",
+      "Port Harcourt"
+    ]
+  },
+  "stats": [
+    {
+      "value": "40+",
+      "label": "Structures delivered",
+      "detail": "Bungalows, duplexes and shells handed over across four states."
+    },
+    {
+      "value": "12",
+      "label": "Years on site",
+      "detail": "Building since 2013, from single-room extensions to full estates."
+    },
+    {
+      "value": "98%",
+      "label": "On-schedule handover",
+      "detail": "Measured against the signed programme of works, not a revised one."
+    },
+    {
+      "value": "0",
+      "label": "Structural failures",
+      "detail": "Every foundation and slab tested before the next stage begins."
+    }
+  ],
+  "projects": [
+    {
+      "id": "warehouse-120",
+      "name": "120m Warehouse — Site Prep",
+      "type": "120m × 24m industrial warehouse",
+      "location": "Interchange, Ogun State",
+      "year": "2026",
+      "status": "In progress",
+      "duration": "Ongoing — foundation trenches",
+      "scope": "Clearing, grading, setting out, excavation",
+      "image": "/one.jpg",
+      "highlights": [
+        "Full plot cleared and graded with a wheel loader",
+        "2,880 m² footprint set out on profile boards and string lines",
+        "Foundation trenches excavated to the engineer’s levels"
+      ]
+    },
+    {
+      "id": "seasoning-store",
+      "name": "Seasoning Store",
+      "type": "Industrial storage block",
+      "location": "Interchange, Ogun State",
+      "year": "2026",
+      "status": "Completed",
+      "duration": "Built on a live factory site",
+      "scope": "Blockwork, roofing, render, steel doors, finishing",
+      "image": "/WhatsApp_Image_2026-10-09_at_16.41.10_2.jpg",
+      "highlights": [
+        "Built against an existing warehouse without halting production",
+        "Three steel sliding doors fabricated and hung on overhead tracks",
+        "Finished to match the facility’s colours and rooflines"
+      ]
+    },
+    {
+      "id": "ridgeview",
+      "name": "Ridgeview Duplex",
+      "type": "5-bedroom duplex + penthouse",
+      "location": "Guzape, Abuja",
+      "year": "2025",
+      "status": "Completed",
+      "duration": "14 months",
+      "scope": "Design, structure, roofing, finishing",
+      "image": "/photo_2026-08-25_13-33-03.jpg",
+      "highlights": [
+        "Reinforced raft foundation on reactive soil",
+        "Exposed brick feature walls with cast cornice detail",
+        "Full external lighting and perimeter fence works"
+      ]
+    },
+    {
+      "id": "alcove",
+      "name": "Alcove Contemporary Villa",
+      "type": "4-bedroom contemporary home",
+      "location": "Lekki Phase 1, Lagos",
+      "year": "2024",
+      "status": "Completed",
+      "duration": "16 months",
+      "scope": "Structure, cladding, glazing, fit-out",
+      "image": "/photo_2026-08-25_13-33-14.jpg",
+      "highlights": [
+        "Double-height structural glazing to the stair core",
+        "Cantilevered balcony slabs with concealed drainage",
+        "Slatted steel gate and screen fabricated in-house"
+      ]
+    },
+    {
+      "id": "nnamdi",
+      "name": "Nnamdi Bungalow Residence",
+      "type": "4-bedroom detached bungalow",
+      "location": "Independence Layout, Enugu",
+      "year": "2024",
+      "status": "Completed",
+      "duration": "9 months",
+      "scope": "Foundation to finishing, landscaping",
+      "image": "/image1.jpg",
+      "highlights": [
+        "Hipped roof in architectural shingle over timber trusses",
+        "Interlocking paved driveway and soft landscaping",
+        "Delivered three weeks ahead of programme"
+      ]
+    },
+    {
+      "id": "harmony",
+      "name": "Harmony Court Fit-out",
+      "type": "Interior finishing package",
+      "location": "Wuse II, Abuja",
+      "year": "2025",
+      "status": "Completed",
+      "duration": "5 months",
+      "scope": "Screeding, POP, tiling, painting, electrical",
+      "image": "/0bf36022-88d0-4583-b62c-3b4be3c29cb0.jpg",
+      "highlights": [
+        "Coffered POP ceilings with recessed lighting layout",
+        "Large-format porcelain tiling with 2mm joints",
+        "Handed over snag-free at first inspection"
+      ]
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "warehouse",
+      "tabLabel": "Warehouse — site preparation",
+      "eyebrow": "On site now",
+      "name": "120m Warehouse",
+      "headline": "Preparing ground for a 120m warehouse.",
+      "location": "Interchange, Ogun State",
+      "status": "In progress",
+      "summary": "Site preparation for a new 120m × 24m warehouse beside the client’s existing stores. The plot has been cleared and graded, the full footprint set out on profile boards, and foundation trenches are being excavated to the engineer’s levels.",
+      "facts": [
+        {
+          "label": "Footprint",
+          "value": "120m × 24m (2,880 m²)"
+        },
+        {
+          "label": "Location",
+          "value": "Interchange, Ogun State"
+        },
+        {
+          "label": "Current stage",
+          "value": "Foundation trench excavation"
+        },
+        {
+          "label": "Plant on site",
+          "value": "Wheel loader + excavation crew"
+        }
+      ],
+      "footprint": {
+        "length": 120,
+        "width": 24
+      },
+      "comparison": [
+        {
+          "label": "Cleared",
+          "src": "https://cdn.magicpatterns.com/uploads/dubySufWcquUh6bNAjdZTd/one.jpg",
+          "alt": "Cleared plot beside the existing warehouse wall at Interchange, ready for setting out"
+        },
+        {
+          "label": "This week",
+          "src": "https://cdn.magicpatterns.com/uploads/unarXwWh4rw6XnzKzN32JQ/WhatsApp_Image_2026-10-09_at_17.20.34.jpg",
+          "alt": "Long foundation trench excavated along the string line with blocks staged nearby"
+        }
+      ],
+      "stages": [
+        {
+          "id": "clearing",
+          "label": "Site clearing",
+          "title": "Clearing & grading the plot",
+          "status": "done",
+          "summary": "Vegetation, stumps and debris removed across the full plot, then a wheel loader graded the ground and opened a haul route along the existing warehouse so deliveries never block the client’s operations.",
+          "works": [
+            "Bush clearing & grubbing",
+            "Stump & debris removal",
+            "Grading with wheel loader",
+            "Haul route for deliveries"
+          ],
+          "photos": [
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/dubySufWcquUh6bNAjdZTd/one.jpg",
+              "alt": "Cleared ground running the length of the existing warehouse"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/6G6Tw7yMAivqDkY92RRUJY/WhatsApp_Image_2026-10-09_at_17.08.49.jpg",
+              "alt": "Wheel loader grading the plot as the supervisor checks the ground"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/wbjuBefxs8KDkcgvqNeZE3/WhatsApp_Image_2026-10-09_at_17.09.00.jpg",
+              "alt": "Wheel loader on site beside the perimeter wall"
+            }
+          ]
+        },
+        {
+          "id": "setting-out",
+          "label": "Setting out",
+          "title": "Setting out 120m × 24m",
+          "status": "done",
+          "summary": "The warehouse footprint pegged out from the client’s drawings, with timber profile boards and string lines fixing every wall and column line before a single trench was opened.",
+          "works": [
+            "Survey & corner pegs",
+            "Timber profile boards",
+            "String lines to wall centres",
+            "Diagonals checked for square"
+          ],
+          "photos": [
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/wrB8fW6aX7tCvzK4Rtv8te/WhatsApp_Image_2026-10-09_at_17.21.39_3.jpg",
+              "alt": "Site team fixing timber profile boards for the warehouse footprint"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/fZ4QTNfqJiQAgxVu6TzT2H/WhatsApp_Image_2026-10-09_at_17.21.39_2.jpg",
+              "alt": "Worker opening the first trench between green string lines"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/bed5f8C5L1kDLnYYd1snfS/WhatsApp_Image_2026-10-09_at_17.21.39.jpg",
+              "alt": "Trench started at the corner tie-in to the existing building"
+            }
+          ]
+        },
+        {
+          "id": "excavation",
+          "label": "Excavation",
+          "title": "Foundation trench excavation",
+          "status": "current",
+          "summary": "Strip foundation trenches dug along the string lines into firm laterite, with depth and width checked against the engineer’s levels and junctions squared off ready for blinding.",
+          "works": [
+            "Trenches to engineer’s depth",
+            "Junctions squared & trimmed",
+            "Spoil kept clear of edges",
+            "Levels checked by site engineer"
+          ],
+          "photos": [
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/unarXwWh4rw6XnzKzN32JQ/WhatsApp_Image_2026-10-09_at_17.20.34.jpg",
+              "alt": "Long excavated trench running across the site"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/tvnk2D1PZfyXcr3eYQV7h8/WhatsApp_Image_2026-10-09_at_17.21.38.jpg",
+              "alt": "Labourer excavating a deep trench in red laterite"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/jyptDdWtJna6HW8dk9DtvT/WhatsApp_Image_2026-10-09_at_17.20.48.jpg",
+              "alt": "Squared trench junction ready for inspection"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/7p5iJ4WrzrN5LFwPeb4MYC/WhatsApp_Image_2026-10-09_at_17.21.38_2.jpg",
+              "alt": "Site supervisor on the trench line with the excavation crew"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/2ZEg1Sw3b3U5Qb9Vc1wFz9/WhatsApp_Image_2026-10-09_at_17.20.40.jpg",
+              "alt": "Site engineer directing works beside the excavated trench"
+            }
+          ]
+        },
+        {
+          "id": "foundation",
+          "label": "Foundations",
+          "title": "Blinding & foundation concrete",
+          "status": "upcoming",
+          "summary": "Next on site: trenches inspected and blinded, reinforcement fixed and strip foundations cast, with concrete cubes taken from every pour.",
+          "works": [
+            "Trench inspection sign-off",
+            "Blinding concrete",
+            "Rebar fixing",
+            "Foundation pour & cube tests"
+          ],
+          "photos": []
+        },
+        {
+          "id": "substructure",
+          "label": "Substructure",
+          "title": "Blockwork & floor slab",
+          "status": "upcoming",
+          "summary": "Substructure blockwork raised to DPC level, filled and compacted, then the warehouse floor slab cast ready for the steel frame.",
+          "works": [
+            "Substructure blockwork",
+            "Laterite fill & compaction",
+            "DPC & hardcore",
+            "Ground floor slab"
+          ],
+          "photos": []
+        }
+      ],
+      "videos": [
+        {
+          "src": "/WhatsApp Video 2026-10-09 at 17.08.39.mp4",
+          "title": "Site clip 1"
+        },
+        {
+          "src": "/WhatsApp Video 2026-10-09 at 17.08.49.mp4",
+          "title": "Site clip 2"
+        },
+        {
+          "src": "/WhatsApp Video 2026-10-09 at 17.09.00 2.mp4",
+          "title": "Site clip 3"
+        },
+        {
+          "src": "/WhatsApp Video 2026-10-09 at 17.09.00.mp4",
+          "title": "Site clip 4"
+        },
+        {
+          "src": "/WhatsApp Video 2026-10-09 at 17.21.38.mp4",
+          "title": "Site clip 5"
+        }
+      ],
+      "videoNote": "Clips sent to the client from site as the plot was cleared and the trenches went in."
+    },
+    {
+      "id": "seasoning-store",
+      "tabLabel": "Seasoning store — completed",
+      "eyebrow": "Latest handover",
+      "name": "Seasoning Store",
+      "headline": "Seasoning Store, start to finish.",
+      "location": "Interchange, Ogun State",
+      "status": "Completed",
+      "summary": "A new storage block built against an existing warehouse inside a working food factory — blockwork, roofing, rendering, fabricated steel sliding doors and finishing, all delivered while the site kept running.",
+      "facts": [
+        {
+          "label": "Location",
+          "value": "Interchange, Ogun State"
+        },
+        {
+          "label": "Building type",
+          "value": "Industrial storage block"
+        },
+        {
+          "label": "Doors",
+          "value": "3 fabricated steel sliding doors"
+        },
+        {
+          "label": "Site condition",
+          "value": "Live factory — no shutdown"
+        }
+      ],
+      "comparison": [
+        {
+          "label": "During",
+          "src": "https://cdn.magicpatterns.com/uploads/5YFQ5NKL99Lu9JW1aFYCbf/WhatsApp_Image_2026-10-09_at_16.32.31.jpg",
+          "alt": "Seasoning store under construction with rendered walls and unpainted steel door frames"
+        },
+        {
+          "label": "Completed",
+          "src": "https://cdn.magicpatterns.com/uploads/6fofsj3xME458AENU2htii/WhatsApp_Image_2026-10-09_at_16.41.09.jpg",
+          "alt": "Completed seasoning store with painted render and red steel sliding doors"
+        }
+      ],
+      "stages": [
+        {
+          "id": "setting-out",
+          "label": "Setting out",
+          "title": "Setting out & first courses",
+          "status": "done",
+          "summary": "Blocks staged on site, the footprint marked against the existing warehouse wall and the first courses laid on a levelled base — without blocking forklift access to the loading bays.",
+          "works": [
+            "Site clearing & levelling",
+            "Material staging",
+            "Setting out against existing wall",
+            "First block courses"
+          ],
+          "photos": [
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/f6J6fEVSKK62dkvDCn6dPN/WhatsApp_Image_2026-10-09_at_16.32.50.jpg",
+              "alt": "Sandcrete blocks staged on site beside the factory gate while workers set out the store"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/eP9dBGbqEFSGa1teTX8u8C/WhatsApp_Image_2026-10-09_at_16.32.53.jpg",
+              "alt": "Mason laying the first course of blocks beside warehouse FD2"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/sVz7zK5eVieBAQUuY6XoHY/WhatsApp_Image_2026-10-09_at_16.32.54.jpg",
+              "alt": "First block course completed along the planting bed"
+            }
+          ]
+        },
+        {
+          "id": "blockwork",
+          "label": "Blockwork",
+          "title": "Walls up to roof height",
+          "status": "done",
+          "summary": "Hollow sandcrete blockwork raised in lifts on independent scaffolding, tied into the existing structure, with door openings formed to suit the sliding-door tracks.",
+          "works": [
+            "9-inch hollow blockwork",
+            "Door openings & lintels",
+            "Tie-in to existing warehouse",
+            "Scaffold erection"
+          ],
+          "photos": [
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/c83xHyvJW5C1LMqdyy2JTG/WhatsApp_Image_2026-10-09_at_16.32.48.jpg",
+              "alt": "Blockwork walls rising on scaffolding next to the existing warehouse"
+            }
+          ]
+        },
+        {
+          "id": "roof-render",
+          "label": "Roof & render",
+          "title": "Roofing and rendering",
+          "status": "done",
+          "summary": "Steel roof brackets and sheeting matched to the neighbouring buildings, then the walls rendered inside and out in a single smooth coat ready for paint.",
+          "works": [
+            "Steel roof brackets",
+            "Roof sheeting",
+            "External rendering",
+            "Internal plastering"
+          ],
+          "photos": [
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/sNep5rNcYSMViAjjmQyA3F/WhatsApp_Image_2026-10-09_at_16.32.37.jpg",
+              "alt": "Store block roofed with openings formed and render in progress"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/wg72B2Vm4wmYHYV6LLgwgi/WhatsApp_Image_2026-10-09_at_16.32.40.jpg",
+              "alt": "Rendered store block with scaffolding and crew finishing the forecourt"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/33Qe5RUWeXtWFiCy4yiDF2/WhatsApp_Image_2026-10-09_at_16.32.45.jpg",
+              "alt": "Plasterer rendering the gable wall from a scaffold platform"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/e4Cagrj3C3gELQgnPwX8XH/WhatsApp_Image_2026-10-09_at_16.32.47.jpg",
+              "alt": "Freshly rendered internal wall corner"
+            }
+          ]
+        },
+        {
+          "id": "doors",
+          "label": "Steel doors",
+          "title": "Fabricated sliding doors",
+          "status": "done",
+          "summary": "Three steel sliding doors fabricated and hung on overhead tracks, checked for alignment and free running before any paint went on.",
+          "works": [
+            "Door frame fabrication",
+            "Overhead track installation",
+            "Alignment checks",
+            "Surface preparation"
+          ],
+          "photos": [
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/kKweDoB3RheC95ibr7J3fu/WhatsApp_Image_2026-10-09_at_16.32.35.jpg",
+              "alt": "Steel sliding door frames hung on the rendered store block"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/5YFQ5NKL99Lu9JW1aFYCbf/WhatsApp_Image_2026-10-09_at_16.32.31.jpg",
+              "alt": "Supervisor checking sliding door alignment with the work zone coned off"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/dsnYTF8x7p4zTdfHVh93aL/WhatsApp_Image_2026-10-09_at_16.30.46.jpg",
+              "alt": "Site engineer inspecting the sliding door frame and track"
+            }
+          ]
+        },
+        {
+          "id": "finishing",
+          "label": "Finishing",
+          "title": "Painting & finishing",
+          "status": "done",
+          "summary": "Doors primed and finished in the facility’s signature red, walls painted to match the existing blocks, and the kerbs repainted in safety black and yellow.",
+          "works": [
+            "Primer & gloss on steel",
+            "External wall paint",
+            "Kerb safety markings",
+            "Site clean-up"
+          ],
+          "photos": [
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/mtxeyFbPJQ51wJAiU9Mtsm/WhatsApp_Image_2026-10-09_at_16.30.35.jpg",
+              "alt": "Painter rolling red gloss onto the steel sliding door"
+            }
+          ]
+        },
+        {
+          "id": "handover",
+          "label": "Handover",
+          "title": "Completed & in use",
+          "status": "done",
+          "summary": "Handed over and immediately put to work by the client’s team. The new store reads as part of the original facility — same colours, same rooflines, same detailing.",
+          "works": [
+            "Final snagging",
+            "Door operation test",
+            "Client walkthrough",
+            "Store in daily use"
+          ],
+          "photos": [
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/wRujPVtydJeviSQuytfXtL/WhatsApp_Image_2026-10-09_at_16.41.10_2.jpg",
+              "alt": "Completed seasoning store beside warehouse FD2 with red sliding doors"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/9LHuEXPNWSXh4vfbMbDAZb/WhatsApp_Image_2026-10-09_at_16.41.09_2.jpg",
+              "alt": "Completed store with doors open and staff working inside"
+            },
+            {
+              "src": "https://cdn.magicpatterns.com/uploads/6fofsj3xME458AENU2htii/WhatsApp_Image_2026-10-09_at_16.41.09.jpg",
+              "alt": "Close view of the finished red steel sliding doors and kerb markings"
+            }
+          ]
+        }
+      ],
+      "videos": [
+        {
+          "src": "/WhatsApp Video 2026-10-09 at 16.32.54 2.mp4",
+          "title": "Site clip 1"
+        },
+        {
+          "src": "/WhatsApp Video 2026-10-09 at 16.32.54.mp4",
+          "title": "Site clip 2"
+        },
+        {
+          "src": "/WhatsApp Video 2026-10-09 at 16.32.55 2.mp4",
+          "title": "Site clip 3"
+        },
+        {
+          "src": "/WhatsApp Video 2026-10-09 at 16.32.55.mp4",
+          "title": "Site clip 4"
+        }
+      ],
+      "videoNote": "Unedited clips our supervisor sent to the client during the build — the same updates every client receives."
+    }
+  ],
+  "services": [
+    {
+      "id": "build",
+      "title": "Residential construction",
+      "summary": "Bungalows, duplexes and contemporary homes taken from a cleared plot to keys in hand, with one team accountable for every stage.",
+      "includes": [
+        "Setting out & excavation",
+        "Foundation and slab works",
+        "Blockwork & roofing",
+        "Handover with as-built records"
+      ]
+    },
+    {
+      "id": "structure",
+      "title": "Structural works",
+      "summary": "Foundations, columns, beams and slabs built to the engineer’s drawings, with concrete tested and logged before the next pour.",
+      "includes": [
+        "Raft, pad & strip foundations",
+        "Rebar detailing & fixing",
+        "Formwork and casting",
+        "Cube testing records"
+      ]
+    },
+    {
+      "id": "finishing",
+      "title": "Finishing & fit-out",
+      "summary": "The stage most builds fall apart on. Screeding, POP, tiling, painting and joinery sequenced so trades never undo each other’s work.",
+      "includes": [
+        "Screed & plaster",
+        "POP ceilings",
+        "Tiling & joinery",
+        "Painting and snagging"
+      ]
+    },
+    {
+      "id": "renovation",
+      "title": "Renovation & extension",
+      "summary": "Opening up old walls, adding floors and correcting inherited defects on occupied properties without taking the whole house offline.",
+      "includes": [
+        "Structural alterations",
+        "Roof replacement",
+        "Extensions & annexes",
+        "Defect rectification"
+      ]
+    },
+    {
+      "id": "management",
+      "title": "Project management",
+      "summary": "For clients building from abroad or juggling work. We hold the programme, the budget and the subcontractors, and report weekly.",
+      "includes": [
+        "Programme of works",
+        "Cost tracking",
+        "Subcontractor vetting",
+        "Weekly photo reports"
+      ]
+    },
+    {
+      "id": "consult",
+      "title": "Costing & consultancy",
+      "summary": "A measured bill of quantities before you commit, so the number you plan around is the number you actually spend.",
+      "includes": [
+        "Bill of quantities",
+        "Material schedules",
+        "Site & soil assessment",
+        "Buildability review"
+      ]
+    }
+  ],
+  "processSteps": [
+    {
+      "step": "01",
+      "title": "Site visit & brief",
+      "body": "We walk the plot with you, check access, soil and levels, and write down exactly what you want the finished building to do."
+    },
+    {
+      "step": "02",
+      "title": "Costing & programme",
+      "body": "You receive a measured bill of quantities and a dated programme of works. No allowances hidden in a single lump sum."
+    },
+    {
+      "step": "03",
+      "title": "Build & report",
+      "body": "Work starts with a fixed team on site. Every week you get progress photos, materials used and the next stage in writing."
+    },
+    {
+      "step": "04",
+      "title": "Snag & handover",
+      "body": "We walk the building with you, close every item on the snag list, then hand over drawings, warranties and as-built records."
+    }
+  ]
+}
