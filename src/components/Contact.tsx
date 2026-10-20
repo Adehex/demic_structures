@@ -89,7 +89,7 @@ export function Contact() {
           body: JSON.stringify({
             access_key: activeKey,
             subject: `New Project Inquiry: ${name} (${type})`,
-            from_name: 'Demic Structures Portal',
+            from_name: 'Demics Homes Portal',
             name,
             phone,
             project_type: type,

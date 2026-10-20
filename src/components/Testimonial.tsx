@@ -10,7 +10,7 @@ export function Testimonial() {
         <div className="grid items-stretch gap-0 overflow-hidden rounded-sm lg:grid-cols-12">
           <img
             src={siteImage}
-            alt="Demic Structures crew laying blockwork on an active residential site"
+            alt="Demics Homes crew laying blockwork on an active residential site"
             className="h-52 w-full object-cover sm:h-64 lg:col-span-5 lg:h-full" />
           
           <blockquote className="flex flex-col justify-center bg-ink-950 p-6 sm:p-8 lg:col-span-7 lg:p-14">

@@ -36,8 +36,8 @@ export function InquiriesViewer() {
     adminEmail: 'demicstructures@gmail.com',
     enableEmailNotification: true,
     provider: 'web3forms',
-    accessKey: 'b94371fa-1fbe-4db5-9e32-23c3ca1ad7f4',
-    fromName: 'Demic Structures Portal'
+    accessKey: '',
+    fromName: 'Demics Homes Portal'
   });
   const [savingConfig, setSavingConfig] = useState(false);
   const [testingNotification, setTestingNotification] = useState(false);
@@ -121,13 +121,13 @@ export function InquiriesViewer() {
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({
             access_key: key,
-            subject: 'Test Email Alert: Demic Structures Admin Portal',
-            from_name: config.fromName || 'Demic Structures Portal',
+            subject: 'Test Email Alert: Demics Homes Admin Portal',
+            from_name: config.fromName || 'Demics Homes Portal',
             name: 'Ademola (Portal Admin)',
             phone: '09055428446',
             project_type: 'Test Project Notification',
             location: 'Guzape, Abuja',
-            message: `This is a test notification email from your Demic Structures Admin Portal.\n\nTarget email: ${config.adminEmail}\nTime: ${new Date().toLocaleString()}\n\nIf you see this, your email alert system is working properly!`,
+            message: `This is a test notification email from your Demics Homes Admin Portal.\n\nTarget email: ${config.adminEmail}\nTime: ${new Date().toLocaleString()}\n\nIf you see this, your email alert system is working properly!`,
             recipient: config.adminEmail
           })
         });
@@ -218,7 +218,7 @@ export function InquiriesViewer() {
     const clean = phone.replace(/\D/g, '');
     const intl = clean.startsWith('0') ? '234' + clean.slice(1) : clean;
     const greeting = encodeURIComponent(
-      `Hello ${name}, thank you for contacting Demic Structures regarding your ${type}${
+      `Hello ${name}, thank you for contacting Demics Homes regarding your ${type}${
         location ? ` in ${location}` : ''
       }! We received your project brief through our website.`
     );

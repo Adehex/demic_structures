@@ -39,7 +39,7 @@ function backendPlugin(): Plugin {
         const recipient = config?.adminEmail || 'demicstructures@gmail.com'
         const provider = config?.provider || 'web3forms'
         const accessKey = config?.accessKey || 'b94371fa-1fbe-4db5-9e32-23c3ca1ad7f4'
-        const fromName = config?.fromName || 'Demic Structures Portal'
+        const fromName = config?.fromName || 'Demics Homes Portal'
 
         // Ensure TLS doesn't fail on local Windows dev environments
         try {
@@ -48,7 +48,7 @@ function backendPlugin(): Plugin {
 
         const subject = `🚨 New Project Inquiry: ${inquiry.name} (${inquiry.type})`
         const textMessage = [
-          `NEW PROJECT INQUIRY RECEIVED AT DEMIC STRUCTURES PORTAL`,
+          `NEW PROJECT INQUIRY RECEIVED AT DEMICS HOMES PORTAL`,
           ``,
           `Client Name: ${inquiry.name}`,
           `Phone Number: ${inquiry.phone}`,
@@ -171,7 +171,7 @@ function backendPlugin(): Plugin {
                 enableEmailNotification: true,
                 provider: 'web3forms',
                 accessKey: 'b94371fa-1fbe-4db5-9e32-23c3ca1ad7f4',
-                fromName: 'Demic Structures Portal'
+                fromName: 'Demics Homes Portal'
               }
               try {
                 if (fs.existsSync(notifPath)) {
@@ -244,7 +244,7 @@ function backendPlugin(): Plugin {
             enableEmailNotification: true,
             provider: 'web3forms',
             accessKey: 'b94371fa-1fbe-4db5-9e32-23c3ca1ad7f4',
-            fromName: 'Demic Structures Portal'
+            fromName: 'Demics Homes Portal'
           }
         }
 
@@ -288,7 +288,7 @@ function backendPlugin(): Plugin {
                 enableEmailNotification: true,
                 provider: 'web3forms',
                 accessKey: 'b94371fa-1fbe-4db5-9e32-23c3ca1ad7f4',
-                fromName: 'Demic Structures Portal'
+                fromName: 'Demics Homes Portal'
               }
               if (fs.existsSync(notifPath)) {
                 config = { ...config, ...JSON.parse(fs.readFileSync(notifPath, 'utf-8')) }
@@ -305,7 +305,7 @@ function backendPlugin(): Plugin {
                 phone: '09055428446',
                 type: 'New build — duplex',
                 location: 'Guzape, Abuja',
-                message: 'This is a test notification from your Demic Structures Admin Portal to verify email delivery.',
+                message: 'This is a test notification from your Demics Homes Admin Portal to verify email delivery.',
                 createdAt: new Date().toISOString()
               }
 

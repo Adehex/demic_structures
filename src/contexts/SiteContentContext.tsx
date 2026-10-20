@@ -152,7 +152,11 @@ function loadContent(): SiteContent {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (!raw) return defaultContent;
     const parsed = JSON.parse(raw) as Partial<SiteContent>;
-    return { ...defaultContent, ...parsed };
+    const merged = { ...defaultContent, ...parsed };
+    if (merged.company && (merged.company.name === 'Demic Structures' || !merged.company.name)) {
+      merged.company.name = 'Demics Homes';
+    }
+    return merged;
   } catch {
     return defaultContent;
   }

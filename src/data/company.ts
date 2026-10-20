@@ -1,7 +1,7 @@
 import type { Company, Stat } from '../types/content';
 
 export const company: Company = {
-  name: 'Demic Structures',
+  name: 'Demics Homes',
   tagline: 'We build it right, from ground to greatness.',
   logo: "/demic-logo.png",
   email: 'demicstructures@gmail.com',

@@ -12,7 +12,7 @@ export function Hero() {
     <section id="top" className="relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden bg-ink-950 lg:min-h-[92vh]">
       <img
         src={heroImage}
-        alt="Completed contemporary three-storey residence built by Demic Structures in Lekki, Lagos"
+        alt="Completed contemporary three-storey residence built by Demics Homes in Lekki, Lagos"
         className="absolute inset-0 h-full w-full object-cover object-center" />
       
       <div className="absolute inset-0 bg-ink-950/72" aria-hidden="true" />

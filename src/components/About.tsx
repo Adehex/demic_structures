@@ -21,7 +21,7 @@ export function About() {
             <div className="relative">
               <img
                 src={teamImage}
-                alt="A Demic Structures site engineer reviewing drawings on an active build"
+                alt="A Demics Homes site engineer reviewing drawings on an active build"
                 className="aspect-[4/3] w-full rounded-sm object-cover object-top sm:aspect-[4/5]" />
               
               <div className="absolute -bottom-6 -right-4 hidden w-56 bg-ink-950 p-6 sm:block lg:-right-8">
