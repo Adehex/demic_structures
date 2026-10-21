@@ -3,7 +3,7 @@ import type { Company, Stat } from '../types/content';
 export const company: Company = {
   name: 'Demics Homes',
   tagline: 'We build it right, from ground to greatness.',
-  logo: "/demic-logo.png",
+  logo: "/demics-homes-logo.png",
   email: 'demicstructures@gmail.com',
   phones: ['09055428446', '08027116110'],
   hours: 'Mon – Sat, 8:00am – 6:00pm',

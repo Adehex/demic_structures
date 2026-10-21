@@ -17,30 +17,20 @@ export function Wordmark({ tone = 'dark' }: WordmarkProps) {
   return (
     <a
       href="#top"
-      className="group flex shrink-0 items-center"
+      className="group flex shrink-0 items-center gap-1.5"
       aria-label={`${company.name || 'Demics Homes'} — home`}
-      style={{ display: 'flex', alignItems: 'center', gap: 0, flexShrink: 0 }}
     >
-      <span
+      <img
+        src={company.logo || '/demics-homes-logo.png'}
+        alt=""
         aria-hidden="true"
-        style={{
-          display: 'block',
-          width: '54px',
-          height: '48px',
-          minWidth: '54px',
-          maxWidth: '54px',
-          flexShrink: 0,
-          backgroundImage: `url(${company.logo || '/demic-logo.png'})`,
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
-        }}
+        className="h-11 w-11 shrink-0 object-contain"
       />
-      <span className="flex flex-col leading-none" style={{ marginLeft: '-8px' }}>
+      <span className="flex flex-col leading-none">
         <span className="font-display text-[15px] font-bold uppercase tracking-[0.18em]" style={{ color: primaryColor }}>
           {firstName}
         </span>
-        <span className="mt-1.5 text-[10px] font-medium uppercase tracking-[0.32em]" style={{ color: secondaryColor }}>
+        <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.32em]" style={{ color: secondaryColor }}>
           {lastName}
         </span>
       </span>

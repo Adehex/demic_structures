@@ -153,8 +153,13 @@ function loadContent(): SiteContent {
     if (!raw) return defaultContent;
     const parsed = JSON.parse(raw) as Partial<SiteContent>;
     const merged = { ...defaultContent, ...parsed };
-    if (merged.company && (merged.company.name === 'Demic Structures' || !merged.company.name)) {
-      merged.company.name = 'Demics Homes';
+    if (merged.company) {
+      if (merged.company.name === 'Demic Structures' || !merged.company.name) {
+        merged.company.name = 'Demics Homes';
+      }
+      if (merged.company.logo === '/demic-logo.png' || !merged.company.logo) {
+        merged.company.logo = '/demics-homes-logo.png';
+      }
     }
     return merged;
   } catch {
