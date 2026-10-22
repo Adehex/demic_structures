@@ -46,14 +46,18 @@ export function Nav() {
       }>
       
       <div className="mx-auto flex h-16 max-w-shell items-center justify-between px-5 sm:h-20 sm:px-6 lg:px-10">
-        <Wordmark tone="light" />
+        <Wordmark tone={solid ? 'light' : 'dark'} />
 
         <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
           {links.map((link) =>
           <a
             key={link.href}
             href={link.href}
-            className="text-sm font-medium text-bone-100/80 transition-colors duration-150 ease-out hover:text-white">
+            className={`text-sm font-semibold transition-colors duration-150 ease-out ${
+              solid
+                ? 'text-white hover:text-signal'
+                : 'text-ink-950 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_12px_rgba(255,255,255,0.9)] hover:text-leaf-dark'
+            }`}>
             
               {link.label}
             </a>
@@ -63,9 +67,13 @@ export function Nav() {
         <div className="hidden items-center gap-6 lg:flex">
           <a
             href={`tel:${company.phones[0]}`}
-            className="flex items-center gap-2 text-sm font-medium text-bone-100/80 transition-colors duration-150 ease-out hover:text-white">
+            className={`flex items-center gap-2 text-sm font-semibold transition-colors duration-150 ease-out ${
+              solid
+                ? 'text-white hover:text-signal'
+                : 'text-ink-950 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_12px_rgba(255,255,255,0.9)] hover:text-leaf-dark'
+            }`}>
             
-            <PhoneIcon className="h-4 w-4 text-signal" aria-hidden="true" />
+            <PhoneIcon className={`h-4 w-4 ${solid ? 'text-signal' : 'text-leaf-dark'}`} aria-hidden="true" />
             {company.phones[0]}
           </a>
           <a
@@ -83,7 +91,9 @@ export function Nav() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className="grid h-11 w-11 place-items-center rounded-full border border-white/20 text-white">
+            className={`grid h-11 w-11 place-items-center rounded-full border ${
+              solid ? 'border-white/20 text-white' : 'border-ink-950/25 bg-white/60 text-ink-950 backdrop-blur-sm'
+            }`}>
             
             {open ? <XIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
           </button>

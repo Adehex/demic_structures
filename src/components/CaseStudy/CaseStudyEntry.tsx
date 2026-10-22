@@ -18,7 +18,7 @@ export function CaseStudyEntry({ study }: CaseStudyEntryProps) {
       {/* Header + comparison */}
       <div className="grid gap-8 sm:gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="flex flex-col lg:col-span-5">
-          <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-signal-dark">
+          <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-leaf-dark">
             {inProgress && <span className="h-2 w-2 animate-pulse rounded-full bg-signal" aria-hidden="true" />}
             {study.eyebrow}
           </p>

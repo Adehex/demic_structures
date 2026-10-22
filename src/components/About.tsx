@@ -34,7 +34,7 @@ export function About() {
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal-dark">Who we are</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-leaf-dark">Who we are</p>
             <h2 className="mt-5 font-display text-3xl font-bold leading-tight tracking-tightest text-ink-900 sm:text-4xl lg:text-[2.85rem]">
               A contractor that answers for the whole building, not just its own trade.
             </h2>
@@ -53,7 +53,7 @@ export function About() {
             <ul className="mt-8 space-y-3">
               {commitments.map((item) =>
               <li key={item} className="flex gap-3 text-[15px] text-ink-800">
-                  <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-signal-dark" aria-hidden="true" />
+                  <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-leaf" aria-hidden="true" />
                   {item}
                 </li>
               )}
@@ -64,7 +64,7 @@ export function About() {
         <dl className="mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-bone-200 pt-10 sm:mt-20 sm:gap-y-10 sm:pt-12 lg:grid-cols-4 lg:gap-x-10">
           {stats.map((stat) =>
           <div key={stat.label} className="lg:border-l lg:border-bone-200 lg:pl-8 lg:first:border-0 lg:first:pl-0">
-              <dt className="font-display text-3xl font-bold tracking-tightest text-ink-900 sm:text-4xl lg:text-5xl">
+              <dt className="font-display text-3xl font-bold tracking-tightest text-leaf-dark sm:text-4xl lg:text-5xl">
                 {stat.value}
               </dt>
               <dd className="mt-2 sm:mt-3">

@@ -9,7 +9,7 @@ export function Services() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal-dark">What we do</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-leaf-dark">What we do</p>
               <h2 className="mt-5 font-display text-3xl font-bold leading-tight tracking-tightest text-ink-900 sm:text-4xl">
                 Six packages. One team accountable for all of them.
               </h2>
@@ -39,7 +39,7 @@ export function Services() {
                       {service.includes.map((item) =>
                     <li
                       key={item}
-                      className="rounded-full bg-bone-100 px-3 py-1.5 text-xs font-medium text-ink-700">
+                      className="rounded-full bg-leaf-soft px-3 py-1.5 text-xs font-medium text-leaf-dark">
                       
                           {item}
                         </li>
